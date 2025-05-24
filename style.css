@@ -34,6 +34,7 @@ nav a {
 }
 
 nav {
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,16 +45,23 @@ nav {
   z-index: 1000;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }
 
 nav a:hover {
   color: #99c4ee; /* darker blue on hover */
 }
 
+nav a.active {
+  color: #99c4ee; /* active link color */
+}
+
 /*start of home section*/
 #home{
   min-height: 100vh;
-  background-image: url('background_img.jpg'); /* file in same folder */
+  background-image: url('images/background_img.jpg'); /* file in same folder */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,35 +88,35 @@ nav a:hover {
 }
 
 #linkedin-icon {
-  content: url('linkedin-icon-white.png');
+  content: url('images/linkedin-icon-white.png');
 }
 
 #linkedin-icon:hover {
-  content: url('linkedin-icon-blue.png');
+  content: url('images/linkedin-icon-blue.png');
   transform: translateY(-2px); /* optional: lifts the icon slightly */
 }
 
 #resume-icon:hover {
-  content: url('resume-icon-blue.png');
+  content: url('images/resume-icon-blue.png');
   transform: translateY(-2px); /* optional: lifts the icon slightly */
 }
 
 #email-icon {
-  content: url('email-icon-white.png');
+  content: url('images/email-icon-white.png');
   width: 60px;
   height: 60px;
 }
 
 #email-icon:hover {
-  content: url('email-icon-blue.png');
+  content: url('images/email-icon-blue.png');
   transform: translateY(-2px); /* optional: lifts the icon slightly */
 }
 #github-icon {
-  content: url('github-icon-white.png');
+  content: url('images/github-icon-white.png');
 }
 
 #github-icon:hover {
-  content: url('github-icon-blue.png');
+  content: url('images/github-icon-blue.png');
   transform: translateY(-2px); /* optional: lifts the icon slightly */
 }
 
@@ -252,7 +260,7 @@ nav a:hover {
 }
 
 #resume_icon:hover {
-  content: url('resume-icon-blue.png');
+  content: url('images/resume-icon-blue.png');
   transform: translateY(-2px); /* optional: lifts the icon slightly */
 }
 
@@ -407,7 +415,7 @@ nav a:hover {
 }
 
 .contact-card h4 {
-  color: orange;
+  color: #00bcd4;
   margin-bottom: 10px;
 }
 
@@ -416,7 +424,7 @@ nav a:hover {
 }
 
 .contact-card a {
-  color: #1fc3d2;
+  color: #ffffff;
   text-decoration: none;
 }
 
