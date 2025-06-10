@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
   padding: 0px;
   margin: 0px;
+  font-size: 14px;
 }
 
 header {
@@ -27,14 +28,17 @@ header h1 {
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 5px 15px;
   text-decoration: none;
   color: #ffffff;
   transition: color 0.3s ease;
+  font-size: 0.9em;
+  white-space: nowrap;
 }
 
 nav {
-  height: 80px;
+  height: auto;
+  min-height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,8 +50,10 @@ nav {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
+  gap: 5px;
 }
 
 nav a:hover {
@@ -56,6 +62,18 @@ nav a:hover {
 
 nav a.active {
   color: #99c4ee; /* active link color */
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: 80px;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  
+  nav a {
+    font-size: 1em;
+  }
 }
 
 /*start of home section*/
@@ -209,20 +227,34 @@ nav a.active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
+  padding: 0 10px;
 }
 
 .skills li {
   background-color: #444;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 20px;
   color: white;
   font-weight: 500;
   transition: background-color 0.3s ease;
+  font-size: 0.9em;
 }
 
 .skills li:hover {
   background-color: #6a3d91;
+}
+
+@media screen and (min-width: 768px) {
+  .skills ul {
+    gap: 15px;
+    padding: 0;
+  }
+
+  .skills li {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
 }
 
 
@@ -238,10 +270,10 @@ nav a.active {
   color:#574444;
 }
 
-.intro{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Make h2 large and centered */
@@ -358,6 +390,21 @@ nav a.active {
   margin-left: -10px; /* pulls company name closer to center */
 }
 
+@media screen and (max-width: 767px) {
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+  
+  .timeline-left h4,
+  .timeline-right h4 {
+    font-size: 1.1em;
+  }
+  
+  .timeline-date {
+    font-size: 0.8em;
+  }
+}
+
 
 
 
@@ -396,10 +443,10 @@ nav a.active {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   z-index: 1;
 }
@@ -411,6 +458,8 @@ nav a.active {
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(153, 196, 238, 0.1);
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .project-card:hover {
@@ -445,16 +494,16 @@ nav a.active {
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 5px;
   margin-bottom: 15px;
 }
 
 .tech-tag {
   background-color: rgba(68, 68, 68, 0.8);
   color: #ffffff;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 15px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   border: 1px solid rgba(153, 196, 238, 0.2);
   transition: all 0.3s ease;
 }
@@ -527,12 +576,14 @@ nav a.active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
+  padding: 0 10px;
   margin-top: 20px;
 }
 
 .contact-card {
-  max-width: 250px;
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,10 +613,27 @@ nav a.active {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 768px) {
+  .contact-info {
+    gap: 40px;
+    padding: 0;
+  }
+}
 
 footer {
   text-align: center;
   margin-top: 40px;
   font-size: 0.9em;
   color: #888;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  #home h1 {
+    font-size: 4em;
+    padding: 0;
+  }
 }
