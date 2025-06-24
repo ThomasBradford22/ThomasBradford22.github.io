@@ -23,7 +23,7 @@ A modern, responsive personal portfolio website showcasing my professional journ
 ## Project Structure
 ```
 personal_website/
-├── index.html          # Main HTML file
+├── index.html          # Main HTML fil
 ├── style.css           # CSS styles and responsive design
 ├── script.js           # JavaScript functionality
 ├── images/             # Image assets
