@@ -13,6 +13,12 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+/* Add scroll offset for fixed navbar */
+section {
+  scroll-margin-top: 100px;
 }
 
 header {
@@ -413,7 +419,7 @@ nav a.active {
   width: 100%;
   min-height: 100vh;
   padding: 20px;
-  padding-top: 50px;
+  padding-top: 100px;
   background-color: rgb(34, 33, 33);
   color: #ffffff;
   position: relative;
