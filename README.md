@@ -91,7 +91,7 @@ This website is deployed using GitHub Pages:
 2. GitHub Pages automatically serves the website
 3. Custom domain: `thomasbradford22.github.io`
 
-## erformance
+## Performance
 - Optimized images and assets
 - Minimal JavaScript for fast loading
 - Efficient CSS with modern layout techniques
